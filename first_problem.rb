@@ -9,9 +9,14 @@ class FirstProblem
   def compute()
     sum = -1
     if @numbers_array.empty? then
-      sum
+      return sum
     end
-    sum
+
+    @numbers_array.each do |number|
+      sum+= number if number.even?
+    end
+    sum +1
+
   end
 
 end
