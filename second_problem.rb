@@ -13,6 +13,11 @@ class SecondProblem
     then
       return Struct::MinMax.new(min_value, min_value)
     end
+
+    if @numbers_array.length == 1 then
+      return Struct::MinMax.new(min_value, @numbers_array[0])
+    end
+
     Struct::MinMax.new(0, 0)
   end
 
