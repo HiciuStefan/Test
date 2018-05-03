@@ -7,7 +7,11 @@ class FirstProblem
   end
 
   def compute()
-
+    sum = -1
+    if @numbers_array.empty? then
+      sum
+    end
+    sum
   end
 
 end
