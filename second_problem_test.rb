@@ -27,4 +27,12 @@ class SecondProblemTest < Test::Unit::TestCase
     assert_equal(9, minMax[:first_large])
   end
 
+
+
+  def test_array_duplicate_highest
+    array = [9, 7, 0, 1, 2, 3, 0, 1, 9]
+    minMax = SecondProblem.new(array).get_numbers
+    assert_equal(9, minMax[:second_large])
+    assert_equal(9, minMax[:first_large])
+  end
 end
