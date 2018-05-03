@@ -7,4 +7,8 @@ class ThirdProblemTest < Test::Unit::TestCase
     assert_false(ThirdProblem.new(Array.new).hasDuplicates)
   end
 
+  def test_one_item_input
+    arrayNumbers = [1]
+    assert_false(ThirdProblem.new(arrayNumbers).hasDuplicates)
+  end
 end
