@@ -11,4 +11,9 @@ class ThirdProblemTest < Test::Unit::TestCase
     arrayNumbers = [1]
     assert_false(ThirdProblem.new(arrayNumbers).hasDuplicates)
   end
+
+  def test_no_duplicates
+    arrayNumbers = [1,2,3,4,5,6,7]
+    assert_false(ThirdProblem.new(arrayNumbers).hasDuplicates)
+  end
 end
