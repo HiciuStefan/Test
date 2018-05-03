@@ -7,9 +7,7 @@ class FirstProblem
 
   def compute()
     sum = 0
-    @numbers_array.each do |number|
-      sum += number if number.even?
-    end
+    @numbers_array.each {|number| sum+=number if number.even? }
     sum
   end
 
