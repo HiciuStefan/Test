@@ -1,11 +1,16 @@
 class SecondProblem
 
+  N_BYTES = [42].pack('i').size
+  N_BITS = N_BYTES * 16
+  MAX = 2 ** (N_BITS - 2) - 1
+  MIN = -MAX - 1
+
   attr_reader :min_value
 
   def initialize(numbers_array)
     @numbers_array = numbers_array
     Struct.new("MinMax", :second_large, :first_large)
-    @min_value = -1
+    @min_value = MIN
   end
 
   def get_numbers
