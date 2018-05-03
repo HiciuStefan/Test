@@ -13,4 +13,9 @@ class FirstProblemTest < Test::Unit::TestCase
     assert_equal(0,FirstProblem.new(array).compute)
   end
 
+  def test_compute_validNumbersArray_correctResult
+    array = [1,3,5,2,8]
+    assert_equal(10,FirstProblem.new(array).compute)
+  end
+
 end
