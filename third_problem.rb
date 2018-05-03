@@ -4,10 +4,6 @@ class ThirdProblem
   end
 
   def hasDuplicates
-    if @numbers.length < 2
-      return false
-    end
-
     found = false
     @numbers.each {|index|
       absolute_current_index =index.abs-1
