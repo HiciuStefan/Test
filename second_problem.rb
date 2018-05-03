@@ -4,8 +4,8 @@ class SecondProblem
 
   def initialize(numbers_array)
     @numbers_array = numbers_array
-    Struct.new("MinMax",:second_large, :first_large)
-    @min_value=-1
+    Struct.new("MinMax", :second_large, :first_large)
+    @min_value = -1
   end
 
   def get_numbers
@@ -18,7 +18,20 @@ class SecondProblem
       return Struct::MinMax.new(min_value, @numbers_array[0])
     end
 
-    Struct::MinMax.new(0, 0)
+    first_large = min_value
+    second_large = min_value
+    @numbers_array.each do |number|
+      if number > second_large then
+        second_large = number
+        if second_large > first_large
+          temp = first_large
+          first_large = second_large
+          second_large = temp
+        end
+      end
+    end
+
+    Struct::MinMax.new(second_large, first_large)
   end
 
 end
