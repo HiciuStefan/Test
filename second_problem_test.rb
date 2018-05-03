@@ -20,5 +20,11 @@ class SecondProblemTest < Test::Unit::TestCase
     assert_equal(0, minMax[:first_large])
   end
 
+  def test_array_individual_highest
+    array = [9, 7, 0, 1, 2, 3, 0, 1, 8]
+    minMax = SecondProblem.new(array).get_numbers
+    assert_equal(8, minMax[:second_large])
+    assert_equal(9, minMax[:first_large])
+  end
 
 end
