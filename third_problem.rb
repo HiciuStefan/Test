@@ -4,12 +4,10 @@ class ThirdProblem
   end
 
   def hasDuplicates
-    if @numbers.length == 0
+    if @numbers.length < 2
       return false
     end
-    if @numbers.length == 1
-      return false
-    end
+
     true
   end
 
