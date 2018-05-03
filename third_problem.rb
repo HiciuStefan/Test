@@ -7,6 +7,9 @@ class ThirdProblem
     if @numbers.length == 0
       return false
     end
+    if @numbers.length == 1
+      return false
+    end
     true
   end
 
